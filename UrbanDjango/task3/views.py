@@ -5,17 +5,26 @@ from django.views.generic import TemplateView
 # Create your views here.
 class Platform(TemplateView):
     template_name = 'platform.html'
-    store_items = ['Главная', 'Магазин', 'Корзина']
-    context = {
-        'title': 'Игры',
-        'h1_title': 'Главная страница',
+    title = 'Мой магазин'
+    h1_text = 'Главная страница'
+    store_items = {'#': 'Главная', '/games': 'Магазин', '/cart': 'Корзина'}
+    extra_context = {
+        'title': title,
+        'h1_text': h1_text,
         'store_items': store_items,
     }
 
 
 class Games(TemplateView):
     template_name = 'games.html'
-
+    title = 'Мой магазин'
+    h1_text = 'Игры'
+    games = ['Atomic Heart', 'Cyberpunk 2077', 'PayDay 2']
+    extra_context = {
+        'title': title,
+        'h1_text': h1_text,
+        'games': games,
+    }
 
 class Cart(TemplateView):
     template_name = 'cart.html'
