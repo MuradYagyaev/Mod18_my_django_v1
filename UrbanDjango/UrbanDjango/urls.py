@@ -20,6 +20,6 @@ from task2.views import func_temp, ClassTemp
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('func_temp', func_temp()),
+    path('func_temp', func_temp),
     path('class_temp', ClassTemp.as_view()),
 ]
