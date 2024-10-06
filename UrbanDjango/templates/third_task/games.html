@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title> {{ title }} </title>
 </head>
 <body>
-
+    <h1> {{ h1_text }} </h1>
+    {% for game in games %}
+        <ul>
+            <li><h3> {{ game }}  <button> Купить </button> </h3></li>
+        </ul>
+    {% endfor %}
+    <form action="/platform">
+        <button > Вернуться обратно </button>
+    </form>
 </body>
 </html>

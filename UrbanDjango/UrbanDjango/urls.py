@@ -24,6 +24,6 @@ urlpatterns = [
     path('func/', func_temp),
     path('class/', ClassTemp.as_view()),
     path('platform/', Platform.as_view()),
-    path('games/', Games.as_view()),
-    path('cart/', Cart.as_view()),
+    path('platform/games/', Games.as_view()),
+    path('platform/cart/', Cart.as_view()),
 ]
