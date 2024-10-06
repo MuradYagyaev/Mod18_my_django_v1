@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'example1',
     'example2',
     'example3',
-    'test2',
+    'task2',
 ]
 
 MIDDLEWARE = [
