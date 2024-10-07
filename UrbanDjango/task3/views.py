@@ -7,7 +7,11 @@ class Platform(TemplateView):
     template_name = 'platform.html'
     title = 'Мой магазин'
     h1_text = 'Главная страница'
-    store_items = {'#': 'Главная', '/platform/games': 'Магазин', '/platform/cart': 'Корзина'}
+    store_items = {
+        '#': 'Главная',
+        '/platform/games': 'Магазин',
+        '/platform/cart': 'Корзина'
+    }
     extra_context = {
         'title': title,
         'h1_text': h1_text,
