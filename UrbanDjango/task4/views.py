@@ -7,15 +7,11 @@ class Platform2(TemplateView):
     template_name = 'platform2.html'
     title = 'Главная'
     pagename = 'Главная страница'
-    store_items = {
-        '#': 'Главная',
-        '/platform2/games2': 'Магазин',
-        '/platform2/cart2': 'Корзина'
-    }
+    content = 'Мы рады приветствовать Вас в нашем магазине компьютерных игр!'
     extra_context = {
         'title': title,
         'pagename': pagename,
-        'store_items': store_items,
+        'content': content,
     }
 
 
