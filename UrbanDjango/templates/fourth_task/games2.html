@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> {{ title }} </title>
-</head>
-<body>
-    <h1> {{ h1_text }} </h1>
+{% extends "menu.html" %}
+
+{% block title %}
+    {{ block.super }} - {{ title }}
+{% endblock %}
+
+{% block pagename %}
+    <h1> {{ pagename }} </h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
     {% for game in games %}
         <ul>
             <li><h3> {{ game }}  <button> Купить </button> </h3></li>
         </ul>
     {% endfor %}
-    <form action="/platform2">
-        <button > Вернуться обратно </button>
-    </form>
-</body>
-</html>
+{% endblock %}

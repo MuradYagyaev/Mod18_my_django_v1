@@ -2,12 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ title }}</title>
+    <title> {% block title %} Мой магазин {% endblock %} </title>
 </head>
 <body>
-    <h1> {{ h1_text }} </h1>
-    {% for key, value in store_items.items %}
-        <a href="{{ key }}"><h3> {{ value }} </h3></a>
-    {% endfor %}
+    <header>
+        {% block pagename %}
+            <h1> Заголовок страницы </h1>
+        {% endblock %}
+    </header>
+    <nav>
+        {% block menu %}
+            <h3><a href="/platform2"> Главная </a></h3>
+            <h3><a href="/platform2/games2"> Каталог товаров </a></h3>
+            <h3><a href="/platform2/cart2"> Корзина </a></h3>
+        {% endblock %}
+    </nav>
+    <main>
+        {% block content %}
+            <h2> Тут ожидается некий контент, в зависимости от маршрута </h2>
+        {% endblock %}
+    </main>
 </body>
 </html>

@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-</head>
-<body>
-    <h1> {{ h1_text }} </h1>
-    {% for key, value in store_items.items %}
-        <a href="{{ key }}"><h3> {{ value }} </h3></a>
-    {% endfor %}
-</body>
-</html>
+{% extends "menu.html" %}
+
+{% block title %}
+    {{ block.super }} - {{ title }}
+{% endblock %}
+
+{% block pagename %}
+    <h1> {{ pagename }} </h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <p> Мы рады приветствовать Вас в нашем магазине компьютерных игр!</p>
+{% endblock %}

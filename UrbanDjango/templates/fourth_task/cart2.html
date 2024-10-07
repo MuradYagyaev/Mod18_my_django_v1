@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> {{ title }} </title>
-</head>
-<body>
-    <h1> Извините, ваша корзина пуста </h1>
-    <form action="/platform2">
-        <button > Вернуться обратно </button>
-    </form>
+{% extends "menu.html" %}
 
-</body>
-</html>
+{% block title %}
+    {{ block.super }} - {{ title }}
+{% endblock %}
+
+{% block pagename %}
+    <h1> {{ pagename }} </h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <h2> {{ content }} </h2>
+{% endblock %}
